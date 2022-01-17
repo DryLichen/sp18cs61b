@@ -1,5 +1,7 @@
+package lab1;
+
 /** Class that determines whether or not a year is a leap year.
- *  @author YOUR NAME HERE
+ *  @author DryLichen
  */
 public class LeapYear {
 
@@ -28,6 +30,17 @@ public class LeapYear {
                 System.out.printf("%s is not a valid number.\n", args[i]);
             }
         }
+    }
+    
+    /**
+     * Analyze whether a year is leap.
+     * @param year
+     */
+    public static boolean isLeapYear(int year) {
+    	if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+    		return true;
+    	}
+    	return false;
     }
 }
 
