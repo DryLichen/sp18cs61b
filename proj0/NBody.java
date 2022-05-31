@@ -5,9 +5,12 @@ public class NBody {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         // 1.Read the data of planets
-        double T = scanner.nextDouble();
-        double dt = scanner.nextDouble();
-        String filename = scanner.next();
+        String line = scanner.nextLine();
+        String[] split = line.split(" ");
+        double T = Double.parseDouble(split[0]);
+        double dt = Double.parseDouble(split[1]);
+        String filename = split[2];
+        
         double radius = readRadius(filename);
         Planet[] planets = readPlanets(filename);
 
@@ -52,6 +55,8 @@ public class NBody {
                     planets[i].xxPos, planets[i].yyPos, planets[i].xxVel,
                     planets[i].yyVel, planets[i].mass, planets[i].imgFileName);
         }
+
+        scanner.close();
     }
 
     /** Get the radius of the univers */
