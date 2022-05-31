@@ -1,4 +1,5 @@
 public class Dog {
+
     private int size;
 
     public Dog(int s) {

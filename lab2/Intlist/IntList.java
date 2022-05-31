@@ -8,13 +8,9 @@ import java.util.Formatter;
  *         [Do not modify this file.]
  */
 public class IntList {
-    /**
-     * First element of list.
-     */
+    /** First element of list. */
     public int first;
-    /**
-     * Remaining elements of list.
-     */
+    /** Remaining elements of list. */
     public IntList rest;
 
     /**
@@ -28,16 +24,12 @@ public class IntList {
     /**
      * A List with null rest, and first = 0.
      */
-    public IntList() {
-    /* NOTE: public IntList () { }  would also work. */
-        this(0, null);
-    }
+    public IntList() {}
 
     /**
      * Returns a list equal to L with all elements squared. Destructive.
      */
     public static void dSquareList(IntList L) {
-
         while (L != null) {
             L.first = L.first * L.first;
             L = L.rest;
@@ -78,29 +70,28 @@ public class IntList {
 
     /**
      * Returns a list consisting of the elements of A followed by the
-     * *  elements of B.  May modify items of A. Don't use 'new'.
+     * elements of B.  May modify items of A. Don't use 'new'.
      */
-
     public static IntList dcatenate(IntList A, IntList B) {
         if (A == null) {
             return B;
         }
 
-        IntList a = A;
-        while (a.rest != null) {
-            a = a.rest;
+        IntList p = A;
+        while (p.rest != null) {
+            p = p.rest;
         }
-        a.rest = B;
+        p.rest = B;
 
         return A;
     }
 
     /**
      * Returns a list consisting of the elements of A followed by the
-     * * elements of B.  May NOT modify items of A.  Use 'new'.
+     * elements of B.  May NOT modify items of A.  Use 'new'.
      */
     public static IntList catenate(IntList A, IntList B) {
-        if( A == null) {
+        if(A == null) {
             return B;
         }
 
@@ -115,6 +106,7 @@ public class IntList {
         pt.rest = B;
 
         return cont;
+
     }
 
 
