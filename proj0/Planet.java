@@ -5,7 +5,7 @@ public class Planet {
     public double yyVel;
     public double mass;
     public String imgFileName;
-    public static final double g = 6.67e-11;
+    private static final double g = 6.67e-11;
 
     public Planet(double xxPos, double yyPos, double xxVel,
                   double yyVel, double mass, String imgFileName) {
@@ -55,7 +55,7 @@ public class Planet {
     }
 
     /** Get the net force exerted on a planet at the horizontal direction (include itself) */
-    public double calcNetForceExertedByX(Planet... planets) {
+    public double calcNetForceExertedByX(Planet[] planets) {
         double nfx = 0;
         for(int i = 0; i < planets.length; i++) {
             if (planets[i].xxPos == xxPos && planets[i].yyPos == yyPos) {
@@ -66,7 +66,7 @@ public class Planet {
         return nfx;
     }
 
-    public double calcNetForceExertedByY(Planet... planets) {
+    public double calcNetForceExertedByY(Planet[] planets) {
         double nfy = 0;
         for(int i = 0; i < planets.length; i++) {
             if (planets[i].xxPos == xxPos && planets[i].yyPos == yyPos) {
