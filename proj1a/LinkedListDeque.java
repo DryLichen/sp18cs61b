@@ -19,7 +19,7 @@ public class LinkedListDeque<T> {
         }
     }
 
-    public LinkedListDeque(){
+    public LinkedListDeque() {
         firstSentinel = new Node();
         lastSentinel = new Node();
         firstSentinel.next = lastSentinel;
@@ -60,6 +60,9 @@ public class LinkedListDeque<T> {
     }
 
     public T removeFirst() {
+        if (size == 0) {
+            return null;
+        }
         size--;
         Node removeNode = firstSentinel.next;
         firstSentinel.next = removeNode.next;
@@ -68,6 +71,9 @@ public class LinkedListDeque<T> {
     }
 
     public T removeLast() {
+        if (size == 0) {
+            return null;
+        }
         size--;
         Node removeNode = lastSentinel.prev;
         lastSentinel.prev = removeNode.prev;

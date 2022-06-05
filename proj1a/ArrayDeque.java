@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class ArrayDeque<T> {
 
     private T[] items;
@@ -41,7 +39,7 @@ public class ArrayDeque<T> {
 
     public void printDeque() {
         StringBuilder string = new StringBuilder();
-        for(int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             string.append(get(i));
             string.append(" ");
         }
@@ -49,7 +47,10 @@ public class ArrayDeque<T> {
     }
 
     public T removeFirst() {
-        if(items.length >= 16 && (float)(size - 1) / items.length < 0.25) {
+        if (size == 0) {
+            return null;
+        }
+        if (items.length >= 16 && (float) (size - 1) / items.length < 0.25) {
             resize(items.length / FACTOR);
         }
 
@@ -61,7 +62,10 @@ public class ArrayDeque<T> {
     }
 
     public T removeLast() {
-        if(items.length >= 16 && (float)(size - 1) / items.length < 0.25) {
+        if (size == 0) {
+            return null;
+        }
+        if (items.length >= 16 && (float) (size - 1) / items.length < 0.25) {
             resize(items.length / FACTOR);
         }
 
@@ -80,7 +84,7 @@ public class ArrayDeque<T> {
     }
 
     /** Resize the array to target capacity */
-    private void resize(int capacity){
+    private void resize(int capacity) {
         T[] newItems = (T[]) new Object[capacity];
         for (int i = 0; i < size; i++) {
             newItems[i] = get(i);
@@ -91,7 +95,7 @@ public class ArrayDeque<T> {
     }
 
     /** make the index circular */
-    private int stdIndex(int index){
+    private int stdIndex(int index) {
         if (index < 0) {
             index += items.length;
         }
