@@ -1,4 +1,4 @@
-public class OffByOne implements CharacterComparator{
+public class OffByOne implements CharacterComparator {
 
     /**
      * @return whether characters are different by exactly one

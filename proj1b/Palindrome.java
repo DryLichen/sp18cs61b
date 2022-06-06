@@ -2,7 +2,7 @@ public class Palindrome {
 
     public Deque<Character> wordToDeque(String word) {
         Deque<Character> deque = new LinkedListDeque<>();
-        if (word == "") {
+        if ("".equals(word)) {
             return deque;
         }
 
@@ -16,7 +16,7 @@ public class Palindrome {
 
     /** decide whether a word is a palindrome */
     public boolean isPalindrome(String word) {
-        if (word == "" || word.length() == 1) {
+        if ("".equals(word) || word.length() == 1) {
             return true;
         }
 
@@ -37,7 +37,7 @@ public class Palindrome {
 
     /** offByOne palindrome */
     public boolean isPalindrome(String word, CharacterComparator cc) {
-        if (word == "" || word.length() == 1) {
+        if ("".equals(word) || word.length() == 1) {
             return true;
         }
 

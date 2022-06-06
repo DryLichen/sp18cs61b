@@ -32,7 +32,7 @@ public class TestPalindrome {
     @Test
     public void testIsPalindromeOffByOne() {
         assertEquals(true, palindrome.isPalindrome("flake", new OffByOne()));
-        assertEquals(false, palindrome.isPalindrome("flaKe", new OffByOne()));
+        assertEquals(true, palindrome.isPalindrome("FLAKE", new OffByOne()));
         assertEquals(false, palindrome.isPalindrome("aaa", new OffByOne()));
         assertEquals(true, palindrome.isPalindrome("AmlB", new OffByOne()));
     }
