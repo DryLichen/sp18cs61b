@@ -6,8 +6,8 @@ import java.util.Random;
  * A library of static methods to generate pseudo-random numbers from
  * different distributions (bernoulli, uniform, gaussian, discrete,
  * and exponential). Also includes methods for shuffling an array and
- * other randomness related stuff you might want to do. Feel free to
- * modify this file.
+ * other randomness related stuff you might want to do.
+ * Feel free to modify this file.
  * <p>
  * Adapted from https://introcs.cs.princeton.edu/java/22library/StdRandom.java.html
 *
@@ -15,8 +15,6 @@ import java.util.Random;
 public class RandomUtils {
 
     /**
-     * Returns a random real number uniformly in [0, 1).
-     *
      * @return a random real number uniformly in [0, 1)
      */
     public static double uniform(Random random) {
@@ -24,8 +22,6 @@ public class RandomUtils {
     }
 
     /**
-     * Returns a random integer uniformly in [0, n).
-     *
      * @param n number of possible integers
      * @return a random integer uniformly between 0 (inclusive) and {@code n} (exclusive)
      * @throws IllegalArgumentException if {@code n <= 0}
@@ -39,8 +35,6 @@ public class RandomUtils {
 
 
     /**
-     * Returns a random long integer uniformly in [0, n).
-     *
      * @param n number of possible {@code long} integers
      * @return a random long integer uniformly between 0 (inclusive) and {@code n} (exclusive)
      * @throws IllegalArgumentException if {@code n <= 0}
